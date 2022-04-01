@@ -16,7 +16,7 @@ function getSeason(date) {
   // remove line with error and write your code here
 
   if (date === undefined) return 'Unable to determine the time of year!';
-  if (!(date instanceof Date)) {
+  if (!(date instanceof Date) || Object.getOwnPropertyNames(date).length > 0) {
     // console.log('Invalid date!');
     throw new Error('Invalid date!');
   }
