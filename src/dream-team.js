@@ -23,24 +23,24 @@ function createDreamTeam(members) {
       result.push(el.trim()[0].toUpperCase());
     } else return false;
   });
-  console.log(result.sort().join(''));
+  // console.log(result.sort().join(''));
   return result.sort().join('');
 }
 
-createDreamTeam([
-  '   William Alston ',
-  ' Paul Benacerraf',
-  '  Ross Cameron',
-  '       Gilles Deleuze',
-  '  Arda Denkel ',
-  '  Michael Devitt',
-  '  Kit Fine',
-  ' Nelson Goodman',
-  'David Kolb',
-  '   Saul Kripke',
-  '  Trenton Merricks',
-  '  Jay Rosenberg',
-]);
+// createDreamTeam([
+//   '   William Alston ',
+//   ' Paul Benacerraf',
+//   '  Ross Cameron',
+//   '       Gilles Deleuze',
+//   '  Arda Denkel ',
+//   '  Michael Devitt',
+//   '  Kit Fine',
+//   ' Nelson Goodman',
+//   'David Kolb',
+//   '   Saul Kripke',
+//   '  Trenton Merricks',
+//   '  Jay Rosenberg',
+// ]);
 
 module.exports = {
   createDreamTeam
