@@ -20,18 +20,22 @@ function isMAC48Address(n) {
   if (n.length !== 17) return false;
   let temp = n.split('-');
   let str = 'ABCDEF1234567890';
+  let flag = true;
   temp.forEach(el => {
-    console.log(el);
-    if (!(str.includes(el[0]) && str.includes(el[0]))) return false;
+    // console.log(el[0]);
+    // console.log(str.includes(el[0]));
+    if (!(str.includes(el[0]) && str.includes(el[1]))) {
+      flag = false;
+    } 
   });
   // console.log(temp);
-  return true;
+  return flag;
 }
 
-isMAC48Address('00-1B-63-84-45-E6');
-isMAC48Address('Z1-1B-63-84-45-E6');
-console.log(isMAC48Address('00-1B-63-84-45-E6'));
-console.log(isMAC48Address('Z1-1B-63-84-45-E6'));
+// isMAC48Address('00-1B-63-84-45-E6');
+// isMAC48Address('Z1-1B-63-84-45-E6');
+// console.log(isMAC48Address('00-1B-63-84-45-E6'));
+// console.log(isMAC48Address('Z1-1B-63-84-45-E6'));
 
 module.exports = {
   isMAC48Address
